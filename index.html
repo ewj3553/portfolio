@@ -13,11 +13,20 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, "Noto Sans KR", sans-serif;
+      font-family:
+        Arial,
+        "Noto Sans KR",
+        "Noto Sans JP",
+        sans-serif;
+
       color: #111;
       background: #fff;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     a {
@@ -25,88 +34,158 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      width: 100%;
+    }
+
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 30px;
     }
 
-    /* Header */
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      padding: 30px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+
       border-bottom: 1px solid #eee;
     }
 
     .header-inner {
+      height: 75px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .logo {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: -0.5px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 35px;
     }
 
     nav {
       display: flex;
       gap: 25px;
-      font-size: 14px;
-      color: #555;
+
+      font-size: 13px;
+      color: #666;
     }
 
     nav a:hover {
       color: #111;
     }
 
-    /* Hero */
+    /* Language */
+
+    .languages {
+      display: flex;
+      gap: 8px;
+
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .language-btn {
+      border: none;
+      background: none;
+
+      color: #aaa;
+      cursor: pointer;
+
+      padding: 4px;
+    }
+
+    .language-btn.active {
+      color: #111;
+      border-bottom: 1px solid #111;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
-      min-height: 600px;
+      min-height: 700px;
+
       display: flex;
       align-items: center;
     }
 
     .hero-text {
-      max-width: 750px;
+      max-width: 850px;
     }
 
     .hero-label {
-      font-size: 13px;
-      color: #888;
       margin-bottom: 25px;
-      letter-spacing: 2px;
+
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: #999;
     }
 
     .hero h1 {
-      font-size: clamp(50px, 9vw, 100px);
-      line-height: 1;
-      letter-spacing: -5px;
       margin-bottom: 35px;
+
+      font-size: clamp(60px, 11vw, 130px);
+      line-height: 0.95;
+
+      letter-spacing: -7px;
+      font-weight: 700;
     }
 
-    .hero p {
+    .hero-description {
       font-size: 20px;
       color: #555;
-      max-width: 550px;
+
+      max-width: 600px;
     }
 
-    /* Section */
+
+    /* =========================
+       SECTION
+    ========================= */
+
     section {
-      padding: 120px 0;
+      padding: 130px 0;
+
       border-top: 1px solid #eee;
     }
 
     .section-title {
-      font-size: 14px;
-      color: #888;
-      letter-spacing: 2px;
-      margin-bottom: 60px;
+      margin-bottom: 70px;
+
+      font-size: 12px;
+      letter-spacing: 3px;
+
+      color: #999;
     }
 
-    /* Projects */
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
     .project {
-      padding: 50px 0;
+      padding: 70px 0;
+
       border-top: 1px solid #ddd;
     }
 
@@ -115,63 +194,107 @@
     }
 
     .project-number {
-      font-size: 13px;
+      margin-bottom: 20px;
+
+      font-size: 12px;
       color: #999;
-      margin-bottom: 15px;
     }
 
     .project h3 {
-      font-size: 36px;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+
+      font-size: 42px;
+      letter-spacing: -2px;
     }
 
-    .project p {
-      max-width: 650px;
+    .project-description {
+      max-width: 700px;
+
+      margin-bottom: 30px;
+
+      font-size: 16px;
       color: #666;
-      margin-bottom: 25px;
     }
+
+    /* Project Image */
+
+    .project-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      margin: 45px 0;
+
+      background: #f5f5f5;
+
+      object-fit: cover;
+    }
+
+    /* Tags */
 
     .project-info {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 25px;
+
+      gap: 8px;
+
+      margin-bottom: 30px;
     }
 
     .tag {
-      padding: 6px 12px;
+      padding: 6px 13px;
+
       border: 1px solid #ddd;
       border-radius: 30px;
-      font-size: 12px;
-      color: #555;
+
+      font-size: 11px;
+      color: #666;
     }
+
+    /* Link */
 
     .project-link {
       display: inline-block;
-      font-size: 14px;
+
+      font-size: 13px;
       font-weight: 600;
+
       border-bottom: 1px solid #111;
-      padding-bottom: 3px;
+      padding-bottom: 4px;
     }
 
-    /* About */
+    .project-link:hover {
+      opacity: 0.5;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
     .about-text {
-      font-size: 28px;
+      max-width: 800px;
+
+      font-size: 30px;
       letter-spacing: -1px;
-      max-width: 750px;
     }
 
-    /* Contact */
+
+    /* =========================
+       CONTACT
+    ========================= */
+
     .contact-list {
       display: flex;
       flex-direction: column;
+
       gap: 15px;
     }
 
     .contact-list a {
-      font-size: 22px;
       width: fit-content;
+
+      font-size: 22px;
+
       border-bottom: 1px solid #ccc;
     }
 
@@ -179,201 +302,630 @@
       border-color: #111;
     }
 
-    /* Footer */
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
-      padding: 40px 0;
+      padding: 45px 0;
+
       color: #999;
-      font-size: 13px;
+      font-size: 12px;
     }
 
-    /* Mobile */
-    @media (max-width: 600px) {
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
       .container {
         padding: 0 20px;
       }
 
-      nav {
+      .header-inner {
+        height: 65px;
+      }
+
+      .header-right {
         gap: 15px;
       }
 
+      nav {
+        display: none;
+      }
+
       .hero {
-        min-height: 500px;
+        min-height: 600px;
       }
 
       .hero h1 {
-        letter-spacing: -3px;
+        font-size: 65px;
+        letter-spacing: -4px;
       }
 
-      .hero p {
+      .hero-description {
         font-size: 17px;
       }
 
       section {
-        padding: 80px 0;
+        padding: 90px 0;
+      }
+
+      .project {
+        padding: 50px 0;
       }
 
       .project h3 {
-        font-size: 28px;
+        font-size: 30px;
       }
 
       .about-text {
-        font-size: 22px;
+        font-size: 23px;
+      }
+
+      .project-image {
+        margin: 30px 0;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-  <header>
-    <div class="container header-inner">
-      <div class="logo">WONJAE LEE</div>
 
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="container">
+
+    <div class="header-inner">
+
+      <div class="logo">
+        WONJAE LEE
+      </div>
+
+
+      <div class="header-right">
+
+        <nav>
+          <a href="#projects" data-i18n="navProjects">
+            Projects
+          </a>
+
+          <a href="#about" data-i18n="navAbout">
+            About
+          </a>
+
+          <a href="#contact" data-i18n="navContact">
+            Contact
+          </a>
+        </nav>
+
+
+        <div class="languages">
+
+          <button
+            class="language-btn active"
+            onclick="changeLanguage('ko')">
+            KR
+          </button>
+
+          <button
+            class="language-btn"
+            onclick="changeLanguage('ja')">
+            JP
+          </button>
+
+          <button
+            class="language-btn"
+            onclick="changeLanguage('en')">
+            EN
+          </button>
+
+        </div>
+
+      </div>
+
     </div>
-  </header>
+
+  </div>
+
+</header>
 
 
-  <main>
 
-    <!-- 첫 화면 -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-text">
+<main>
 
-          <div class="hero-label">
-            PORTFOLIO · 2026
-          </div>
 
-          <h1>이원재</h1>
+<!-- =========================
+     HERO
+========================= -->
 
-          <p>
-            대학에서 제작한 작품과<br>
-            그 과정에서의 경험을 소개합니다.
-          </p>
+<section class="hero">
 
-        </div>
+  <div class="container">
+
+    <div class="hero-text">
+
+      <div class="hero-label">
+        PORTFOLIO · 2026
       </div>
-    </section>
 
 
-    <!-- 작품 -->
-    <section id="projects">
-      <div class="container">
-
-        <div class="section-title">
-          SELECTED PROJECTS
-        </div>
+      <h1>
+        이원재
+      </h1>
 
 
-        <!-- 작품 1 -->
-        <article class="project">
+      <p
+        class="hero-description"
+        data-i18n="heroDescription">
 
-          <div class="project-number">
-            01
-          </div>
+        대학에서 제작한 작품과<br>
+        그 과정에서의 경험을 소개합니다.
 
-          <h3>첫 번째 작품</h3>
+      </p>
 
-          <p>
-            이곳에 첫 번째 작품에 대한 설명을 작성합니다.
-            작품을 만든 이유와 어떤 작업을 했는지,
-            결과적으로 무엇을 보여주고 싶은지를 소개할 수 있습니다.
-          </p>
-
-          <div class="project-info">
-            <span class="tag">University</span>
-            <span class="tag">Project</span>
-          </div>
-
-          <a href="#" class="project-link">
-            VIEW PROJECT →
-          </a>
-
-        </article>
-
-
-        <!-- 작품 2 -->
-        <article class="project">
-
-          <div class="project-number">
-            02
-          </div>
-
-          <h3>두 번째 작품</h3>
-
-          <p>
-            이곳에 두 번째 작품에 대한 설명을 작성합니다.
-            작품의 특징과 제작 과정, 본인이 담당한 부분 등을
-            자유롭게 소개할 수 있습니다.
-          </p>
-
-          <div class="project-info">
-            <span class="tag">University</span>
-            <span class="tag">Project</span>
-          </div>
-
-          <a href="#" class="project-link">
-            VIEW PROJECT →
-          </a>
-
-        </article>
-
-      </div>
-    </section>
-
-
-    <!-- 소개 -->
-    <section id="about">
-      <div class="container">
-
-        <div class="section-title">
-          ABOUT
-        </div>
-
-        <p class="about-text">
-          안녕하세요, 이원재입니다.<br>
-          대학에서 다양한 작품을 제작하며
-          새로운 것을 만들고 경험해왔습니다.
-        </p>
-
-      </div>
-    </section>
-
-
-    <!-- 연락처 -->
-    <section id="contact">
-      <div class="container">
-
-        <div class="section-title">
-          CONTACT
-        </div>
-
-        <div class="contact-list">
-          <a href="mailto:your@email.com">
-            your@email.com
-          </a>
-
-          <a href="#">
-            GitHub
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-
-  <footer>
-    <div class="container">
-      © 2026 Wonjae Lee. All rights reserved.
     </div>
-  </footer>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div
+      class="section-title"
+      data-i18n="projectsTitle">
+
+      SELECTED PROJECTS
+
+    </div>
+
+
+
+    <!-- PROJECT 01 -->
+
+    <article class="project">
+
+      <div class="project-number">
+        01
+      </div>
+
+
+      <h3 data-i18n="project1Title">
+        첫 번째 작품
+      </h3>
+
+
+      <!-- 나중에 사진 파일을 넣으면
+           src를 images/project1.jpg로 변경 -->
+
+      <img
+        class="project-image"
+        src="https://placehold.co/1600x900/f5f5f5/999?text=PROJECT+01"
+        alt="Project 01"
+      >
+
+
+      <p
+        class="project-description"
+        data-i18n="project1Description">
+
+        대학에서 제작한 첫 번째 작품입니다.
+        작품의 제작 목적과 과정,
+        본인이 담당한 부분 등을 소개합니다.
+
+      </p>
+
+
+      <div class="project-info">
+
+        <span
+          class="tag"
+          data-i18n="university">
+          University
+        </span>
+
+        <span
+          class="tag"
+          data-i18n="project">
+          Project
+        </span>
+
+      </div>
+
+
+      <a
+        href="#"
+        class="project-link"
+        data-i18n="viewProject">
+
+        VIEW PROJECT →
+
+      </a>
+
+    </article>
+
+
+
+    <!-- PROJECT 02 -->
+
+    <article class="project">
+
+      <div class="project-number">
+        02
+      </div>
+
+
+      <h3 data-i18n="project2Title">
+        두 번째 작품
+      </h3>
+
+
+      <img
+        class="project-image"
+        src="https://placehold.co/1600x900/f5f5f5/999?text=PROJECT+02"
+        alt="Project 02"
+      >
+
+
+      <p
+        class="project-description"
+        data-i18n="project2Description">
+
+        대학에서 제작한 두 번째 작품입니다.
+        작품의 특징과 제작 과정,
+        본인이 맡은 역할 등을 소개합니다.
+
+      </p>
+
+
+      <div class="project-info">
+
+        <span
+          class="tag"
+          data-i18n="university">
+          University
+        </span>
+
+        <span
+          class="tag"
+          data-i18n="project">
+          Project
+        </span>
+
+      </div>
+
+
+      <a
+        href="#"
+        class="project-link"
+        data-i18n="viewProject">
+
+        VIEW PROJECT →
+
+      </a>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div
+      class="section-title"
+      data-i18n="aboutTitle">
+
+      ABOUT
+
+    </div>
+
+
+    <p
+      class="about-text"
+      data-i18n="aboutText">
+
+      안녕하세요, 이원재입니다.<br>
+      대학에서 다양한 작품을 제작하며
+      새로운 것을 만들고 경험해왔습니다.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div
+      class="section-title"
+      data-i18n="contactTitle">
+
+      CONTACT
+
+    </div>
+
+
+    <div class="contact-list">
+
+      <!-- 이메일은 나중에 수정 -->
+
+      <a href="mailto:your@email.com">
+        your@email.com
+      </a>
+
+
+      <!-- GitHub 주소는 나중에 수정 -->
+
+      <a href="#">
+        GitHub
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container">
+
+    © 2026 Wonjae Lee.
+
+  </div>
+
+</footer>
+
+
+
+<!-- =========================
+     LANGUAGE SCRIPT
+========================= -->
+
+<script>
+
+  const translations = {
+
+    ko: {
+
+      navProjects: "Projects",
+      navAbout: "About",
+      navContact: "Contact",
+
+      heroDescription:
+        "대학에서 제작한 작품과<br>그 과정에서의 경험을 소개합니다.",
+
+      projectsTitle:
+        "SELECTED PROJECTS",
+
+      project1Title:
+        "첫 번째 작품",
+
+      project1Description:
+        "대학에서 제작한 첫 번째 작품입니다. 작품의 제작 목적과 과정, 본인이 담당한 부분 등을 소개합니다.",
+
+      project2Title:
+        "두 번째 작품",
+
+      project2Description:
+        "대학에서 제작한 두 번째 작품입니다. 작품의 특징과 제작 과정, 본인이 맡은 역할 등을 소개합니다.",
+
+      university:
+        "University",
+
+      project:
+        "Project",
+
+      viewProject:
+        "VIEW PROJECT →",
+
+      aboutTitle:
+        "ABOUT",
+
+      aboutText:
+        "안녕하세요, 이원재입니다.<br>대학에서 다양한 작품을 제작하며 새로운 것을 만들고 경험해왔습니다.",
+
+      contactTitle:
+        "CONTACT"
+
+    },
+
+
+    ja: {
+
+      navProjects: "Projects",
+      navAbout: "About",
+      navContact: "Contact",
+
+      heroDescription:
+        "大学で制作した作品と<br>その制作を通して得た経験を紹介します。",
+
+      projectsTitle:
+        "SELECTED PROJECTS",
+
+      project1Title:
+        "プロジェクト 01",
+
+      project1Description:
+        "大学在学中に制作した作品です。制作の目的やプロセス、自分が担当した内容について紹介します。",
+
+      project2Title:
+        "プロジェクト 02",
+
+      project2Description:
+        "大学在学中に制作した作品です。作品の特徴や制作プロセス、自分が担当した役割について紹介します。",
+
+      university:
+        "University",
+
+      project:
+        "Project",
+
+      viewProject:
+        "VIEW PROJECT →",
+
+      aboutTitle:
+        "ABOUT",
+
+      aboutText:
+        "はじめまして、イ・ウォンジェです。<br>大学でさまざまな作品制作に取り組み、新しいものを生み出す経験を重ねてきました。",
+
+      contactTitle:
+        "CONTACT"
+
+    },
+
+
+    en: {
+
+      navProjects: "Projects",
+      navAbout: "About",
+      navContact: "Contact",
+
+      heroDescription:
+        "I introduce the projects I created<br>during my university studies and the experiences I gained through them.",
+
+      projectsTitle:
+        "SELECTED PROJECTS",
+
+      project1Title:
+        "Project 01",
+
+      project1Description:
+        "A project created during my university studies. This section introduces the purpose, process, and my contributions to the project.",
+
+      project2Title:
+        "Project 02",
+
+      project2Description:
+        "A project created during my university studies. This section introduces the project's features, development process, and my role.",
+
+      university:
+        "University",
+
+      project:
+        "Project",
+
+      viewProject:
+        "VIEW PROJECT →",
+
+      aboutTitle:
+        "ABOUT",
+
+      aboutText:
+        "Hello, I'm Wonjae Lee.<br>Throughout my university studies, I have worked on various projects and gained experience creating and exploring new ideas.",
+
+      contactTitle:
+        "CONTACT"
+
+    }
+
+  };
+
+
+  function changeLanguage(language) {
+
+    const elements =
+      document.querySelectorAll("[data-i18n]");
+
+
+    elements.forEach(element => {
+
+      const key =
+        element.getAttribute("data-i18n");
+
+
+      if (translations[language][key]) {
+
+        element.innerHTML =
+          translations[language][key];
+
+      }
+
+    });
+
+
+    /* 버튼 상태 변경 */
+
+    document
+      .querySelectorAll(".language-btn")
+      .forEach(button => {
+
+        button.classList.remove("active");
+
+      });
+
+
+    const buttons =
+      document.querySelectorAll(".language-btn");
+
+
+    if (language === "ko") {
+      buttons[0].classList.add("active");
+    }
+
+    if (language === "ja") {
+      buttons[1].classList.add("active");
+    }
+
+    if (language === "en") {
+      buttons[2].classList.add("active");
+    }
+
+
+    /* 페이지 언어 설정 */
+
+    document.documentElement.lang =
+      language;
+
+  }
+
+</script>
+
 
 </body>
 </html>
